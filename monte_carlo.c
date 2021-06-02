@@ -11,6 +11,25 @@ float frandom() {
   return ret;
 }
 
+float mc_pi(int n)
+{
+  float x,y,distance;
+  int square = 0, circle = 0;
+  for(int i=0; i<n; i++)
+  {
+    x = frandom();
+    y = frandom();
+    distance = sqrt((x*x)+(y*y));
+    if(distance>1.0)
+      square++;
+    else
+      circle++;
+  }
+  return (float(4*(circle/square)));
+  
+}
+
+
 int main(void) {
   float pi0;
   float pi1;
