@@ -12,7 +12,7 @@ float wallis_pi(int n)
   {
     sum = sum + ((4*j*j)/((4*j*j)-1));
   }
-  return sum;
+  return (sum*2);
 }
 
 int main(void) {
