@@ -25,7 +25,9 @@ float mc_pi(int n)
     else
       circle++;
   }
-  return (float((4)*(circle/square)));
+  float pi = 4*(circle/square);
+  //return (float((4)*(circle/square)));
+  return pi;
   
 }
 
