@@ -5,6 +5,16 @@
 
 float wallis_pi(int);
 
+float wallis_pi(int n)
+{
+  float sum = 0;
+  for(int j=1; j<=n; j++)
+  {
+    sum = sum + ((4*n*n)/((4*n*n)-1));
+  }
+  return sum;
+}
+
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
