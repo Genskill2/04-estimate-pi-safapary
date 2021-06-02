@@ -10,7 +10,7 @@ float wallis_pi(int n)
   float sum = 0;
   for(int j=1; j<=n; j++)
   {
-    sum = sum + ((4*n*n)/((4*n*n)-1));
+    sum = sum + ((4*j*j)/((4*j*j)-1));
   }
   return sum;
 }
