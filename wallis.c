@@ -5,17 +5,15 @@
 
 float wallis_pi(int);
 
-float wallis_pi(int n)
+float wallis_pi(int q)
 {
-  float pi = 1.0;
-  
-  for(int j=1; j<=n; j++)
+  float t, pi=1;
+  for(int n=1; n<=q; n++)
   {
-    //sum = sum + ((4*j*j)/((4*j*j)-1));
-     float num = 4*(float)j * (float)j/(4* (float)n * (float)n -1);
-    pi = pi*num;
+    t = 4*(float)n*(float)n/(4*(float)n*(float)n-1);
+    pi = pi*t;
   }
-  return (pi*2);
+  return 2*pi;
 }
 
 int main(void) {
