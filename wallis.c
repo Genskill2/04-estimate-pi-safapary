@@ -7,13 +7,13 @@ float wallis_pi(int);
 
 float wallis_pi(int n)
 {
-  long double pi = 1.0;
+  float pi = 1.0;
   
   for(int j=1; j<=n; j++)
   {
     //sum = sum + ((4*j*j)/((4*j*j)-1));
-    long double num = 4 * j * j;
-    pi *= num/(num-1);
+     float num = 4*(float)j * (float)j/(4* (float)n * (float)n -1);
+    pi = pi*num;
   }
   return (pi*2);
 }
