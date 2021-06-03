@@ -19,13 +19,13 @@ float mc_pi(int n)
   {
     x = frandom();
     y = frandom();
-    distance = sqrt((x*x)+(y*y));
-    if(distance>1.0)
+    distance = (x*x)+(y*y);
+    if(distance<=1)
       square++;
     else
       circle++;
   }
-  float pi = 4*(circle/square);
+  float pi = (float) square/n *4;
   //return (float((4)*(circle/square)));
   return pi;
   
